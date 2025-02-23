@@ -13,10 +13,9 @@ if [ -d "$GIT_TEMPLATE_DIR" ]; then
             extensionless_hook=${hook%.py}
             echo Deploying $hook as $extensionless_hook ...
             cp hooks/$hook $GIT_TEMPLATE_DIR/hooks/$extensionless_hook
-            echo Updating execute permission for $extensionless_hook ...
-            chmod +x $GIT_TEMPLATE_DIR/hooks/$extensionless_hook
             echo $hook deployed correctly
         done
+        echo "REMEMBER: hooks need to have execute permissions, update them if required."
     else
         echo "There is not a 'hooks' folder in the templates dir."
         exit 1
