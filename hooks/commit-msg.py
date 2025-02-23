@@ -9,7 +9,7 @@ import re
 
 MESSAGE_PATTERN = "(.*): (.*)"
 GIT_COMMIT_TYPES = [
-    "feat", "fix", "ref", "enh"
+    "feat", "fix", "ref", "enh", "doc"
 ]
 
 if __name__=="__main__":
